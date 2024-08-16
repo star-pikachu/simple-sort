@@ -19,8 +19,6 @@ def main():
     """
     st.markdown(hide_menu, unsafe_allow_html=True)
     
-    st.title("Простейшие алгоритмы сортировки")
-
 # Функции сортировок: Выбором Вставками Обменами
 def selection_sort(arr):
     for i in range(len(arr)):
@@ -50,7 +48,7 @@ def bubble_sort(arr):
     return arr
 
 # Title
-st.title("Sorting Algorithms Visualizer")
+st.title("Простейшие алгоритмы сортировки")
 
 # Input
 user_input = st.text_input("Enter a list of numbers separated by commas:", "5, 3, 8, 6, 2")
