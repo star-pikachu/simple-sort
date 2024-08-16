@@ -51,18 +51,18 @@ def bubble_sort(arr):
 st.title("Простейшие алгоритмы сортировки")
 
 # Input
-user_input = st.text_input("Enter a list of numbers separated by commas:", "5, 3, 8, 6, 2")
+user_input = st.text_input("Введите список чисел, отделяя из запятыми:", "5, 3, 8, 6, 2")
 numbers = list(map(int, user_input.split(',')))
 
 # Tabs
-tabs = st.tabs(["Selection Sort", "Insertion Sort", "Bubble Sort"])
+tabs = st.tabs(["Сортировка Выбором", "Сортировка Вставками", "Сортировка Обменом"])
 
 # Tab0 Сортировка Выбором
 with tabs[0]:
-    st.header("Selection Sort")
-    if st.button("Sort", key="selection_sort_button"):
+    st.header("Сортировка Выбором")
+    if st.button("Сортировать", key="selection_sort_button"):
         sorted_numbers = selection_sort(numbers.copy())
-        st.write("Sorted List:", sorted_numbers)
+        st.write("Получилось:", sorted_numbers)
     st.code("""
 def selection_sort(arr):
     for i in range(len(arr)):
@@ -76,10 +76,10 @@ def selection_sort(arr):
 
 # Tab1 Сортировка Вставками
 with tabs[1]:
-    st.header("Insertion Sort")
-    if st.button("Sort", key="insertion_sort_button"):
+    st.header("Сортировка Вставками")
+    if st.button("Сортировать", key="insertion_sort_button"):
         sorted_numbers = insertion_sort(numbers.copy())
-        st.write("Sorted List:", sorted_numbers)
+        st.write("Получилось:", sorted_numbers)
     st.code("""
 def insertion_sort(arr):
     for i in range(1, len(arr)):
@@ -94,10 +94,10 @@ def insertion_sort(arr):
 
 # Tab2 Сортировка Обменом
 with tabs[2]:
-    st.header("Bubble Sort")
-    if st.button("Sort", key="bubble_sort_button"):
+    st.header("Сортировка Обменом")
+    if st.button("Сортировать", key="bubble_sort_button"):
         sorted_numbers = bubble_sort(numbers.copy())
-        st.write("Sorted List:", sorted_numbers)
+        st.write("Получилось:", sorted_numbers)
     st.code("""
 def bubble_sort(arr):
     n = len(arr)
