@@ -62,7 +62,7 @@ tabs = st.tabs(["Selection Sort", "Insertion Sort", "Bubble Sort"])
 # Tab0 Сортировка Выбором
 with tabs[0]:
     st.header("Selection Sort")
-    if st.button("Sort"):
+    if st.button("Sort", key="selection_sort_button"):
         sorted_numbers = selection_sort(numbers.copy())
         st.write("Sorted List:", sorted_numbers)
     st.code("""
@@ -79,7 +79,7 @@ def selection_sort(arr):
 # Tab1 Сортировка Вставками
 with tabs[1]:
     st.header("Insertion Sort")
-    if st.button("Sort"):
+    if st.button("Sort", key="insertion_sort_button"):
         sorted_numbers = insertion_sort(numbers.copy())
         st.write("Sorted List:", sorted_numbers)
     st.code("""
@@ -97,7 +97,7 @@ def insertion_sort(arr):
 # Tab2 Сортировка Обменом
 with tabs[2]:
     st.header("Bubble Sort")
-    if st.button("Sort"):
+    if st.button("Sort", key="bubble_sort_button"):
         sorted_numbers = bubble_sort(numbers.copy())
         st.write("Sorted List:", sorted_numbers)
     st.code("""
