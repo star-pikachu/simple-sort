@@ -52,7 +52,18 @@ st.title("Простейшие алгоритмы сортировки в Python
 
 # Input
 user_input = st.text_input("Введите список чисел, отделяя из запятыми:", "5, 3, 8, 6, 2")
-numbers = list(map(int, user_input.split(',')))
+
+# Проверка Input
+if user_input:
+    try:
+        numbers = list(map(int, user_input.split(',')))
+        if len(numbers) == 0:
+            st.error("Добавьте числа, пожалуйста")
+    except ValueError:
+        st.error("Неверный ввод! Добавьте числа, разделенные запятыми, пожалуйста.")
+else:
+    numbers = []
+# было без проверки: numbers = list(map(int, user_input.split(',')))
 
 # Tabs
 tabs = st.tabs(["Сортировка Выбором", "Сортировка Вставками", "Сортировка Обменом"])
