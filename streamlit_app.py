@@ -66,7 +66,7 @@ else:
 # было без проверки: numbers = list(map(int, user_input.split(',')))
 
 # Tabs
-tabs = st.tabs(["Сортировка Выбором", "Сортировка Вставками", "Сортировка Обменом"])
+tabs = st.tabs(["Сортировка Выбором", "Сортировка Вставками", "Сортировка Обменами"])
 
 # Tab0 Сортировка Выбором
 with tabs[0]:
@@ -103,9 +103,9 @@ def insertion_sort(arr):
     return arr
 """)
 
-# Tab2 Сортировка Обменом
+# Tab2 Сортировка Обменами
 with tabs[2]:
-    st.header("Сортировка Обменом")
+    st.header("Сортировка Обменами")
     if st.button("Сортировать", key="bubble_sort_button"):
         sorted_numbers = bubble_sort(numbers.copy())
         st.write("Получилось:", sorted_numbers)
