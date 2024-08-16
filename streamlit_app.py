@@ -51,7 +51,7 @@ def bubble_sort(arr):
 st.title("Простейшие алгоритмы сортировки в Python")
 
 # Input
-user_input = st.text_input("Введите список чисел, отделяя из запятыми:", "5, 3, 8, 6, 2")
+user_input = st.text_input("Введите список чисел, отделяя их запятыми:", "5, 3, 8, 6, 2")
 
 # Проверка Input
 if user_input:
